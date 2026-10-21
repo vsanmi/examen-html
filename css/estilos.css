@@ -1,7 +1,7 @@
 /*Fuente Geist Pixel, el archivo está en assets/fonts*/
 @font-face {
   font-family: 'Geist Pixel';
-  src: url('../assets/fonts/GeistPixel-Regular.ttf') format('truetype');
+  src: url('../assets/fonts/GeistPixel-Square.woff2') format('woff2');
   font-style: normal;
   font-weight: 400;
   font-display: swap;
