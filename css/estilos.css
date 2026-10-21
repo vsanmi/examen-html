@@ -27,7 +27,6 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  font-family: 'Newsreader', Georgia, serif;
   font-size: 1.125rem;
   background: #f5f0e6;
   color: #1c1712;
