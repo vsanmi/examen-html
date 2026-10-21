@@ -1,0 +1,523 @@
+/*Fuente Newsreader desde Google Fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap');
+
+/*Fuente Geist Pixel, el archivo está en assets/fonts*/
+@font-face {
+  font-family: 'Geist Pixel';
+  src: url('../assets/fonts/GeistPixel-Regular.ttf') format('truetype');
+  font-display: swap;
+}
+
+/* Reset del cache y estilos del navegador */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* El body en columna para que el footer siempre quede abajo */
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Newsreader', Georgia, serif;
+  font-size: 1.125rem;
+  background: #f5f0e6;
+  color: #1c1712;
+  line-height: 1.65;
+}
+
+main {
+  flex: 1; /* ocupa el espacio que sobra */
+}
+
+/*Header*/
+.cabecera {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 2rem;
+  background: #fbf9f4;
+  border-bottom: 1px solid #e1d8c3;
+}
+
+/* Logo de nombre*/
+.logo {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+  white-space: nowrap;
+  line-height: 1.15;
+  color: #1c1712;
+  text-decoration: none;
+}
+
+.logo-nombre {
+  font-family: 'Geist Pixel', monospace;
+  font-size: 1.125rem;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.logo-rol {
+  font-family: 'Geist Pixel', 'Courier New', monospace;
+  font-size: 0.75rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #52493c;
+}
+
+/* Menú de navegación */
+.menu-lista {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.menu-lista a {
+  display: block;
+  padding: 0.5rem 1rem;
+  border-radius: 2px;
+  font-family: 'Geist Pixel', monospace;
+  font-size: 0.875rem;
+  color: #1c1712;
+  text-decoration: none;
+}
+
+.menu-lista a:hover {
+  background: #e3eff6;
+}
+
+/* Página en la que estoy, resaltada */
+.menu-lista a[aria-current="page"] {
+  background: #a9d0e8;
+}
+
+.redes-sociales a:focus-visible {
+  outline: 2px solid #fbf9f4;
+  outline-offset: 3px;
+}
+
+/* Contenido principal */
+.contenido {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 4rem 3rem;
+  text-align: center;
+}
+
+/* Títulos, parrafos y secciones */
+h1, h2, h3, h4 {
+  margin: 3 0 1rem;
+  font-family: 'Geist Pixel', monospace;
+  font-size: 2rem;
+  line-height: 1.1;
+  font-weight: bold;
+}
+
+.contenido-indice p {
+  font-family: 'Geist Pixel', monospace;
+  font-size: 1.2rem;
+  line-height: 1.7;
+  margin-bottom: 0;
+}
+
+.contenido-indice {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  margin: 0 auto;
+  max-width: 1100px;
+  padding: 2rem 5%;
+}
+
+.contenido-indice section {
+  display: flex;
+  align-items: center;
+  gap: 3%;
+  width: 100%;
+}
+
+.texto {
+  flex: 1;
+  min-width: 0;
+}
+
+/* Imagenes indice */
+.imagen-indice {
+  width: 40%;
+  height: auto;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  max-width: 450px
+}
+
+/* Galería de imágenes: dos columnas */
+.galeria-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
+  max-width: 1100px;
+  margin: 2rem auto;
+  width: 100%;
+}
+
+/* Todas las imágenes tienen el mismo tamaño */
+.galeria-grid img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  border-radius: 0.5rem;
+}
+
+/* Formulario de presupuesto */
+.formulario {
+  max-width: 560px;
+  margin: 2rem auto 0;
+  padding: 2rem;
+  background: #ede6d6;
+  border: 1px solid #e1d8c3;
+  border-radius: 4px;
+  text-align: left;
+}
+
+.nota-obligatorio {
+  margin-bottom: 1.5rem;
+  color: #52493c;
+}
+
+/* Asterisco de los campos obligatorios */
+.obligatorio {
+  color: #b42318;
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.campo label,
+.grupo legend {
+  font-family: 'Geist Pixel', monospace;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+}
+
+/* Se estilizan los campos de texto e inputs */
+.campo input:not([type="checkbox"]),
+.campo textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1.5px solid #c9bea4;
+  border-radius: 2px;
+  background: #fbf9f4;
+  color: #1c1712;
+  font: inherit;
+}
+
+::placeholder {
+  color: #8c8271;
+}
+
+.campo textarea {
+  min-height: 7rem;
+  resize: vertical;
+}
+
+/* Prefijo y teléfono en una misma fila */
+.campo-doble {
+  display: grid;
+  grid-template-columns: 7rem 1fr;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.campo-doble .campo {
+  margin-bottom: 0;
+}
+
+/* Selección múltiple de tipo de proyecto */
+.grupo {
+  margin: 0 0 1.5rem;
+  padding: 0;
+  border: 0;
+}
+
+.grupo legend {
+  padding: 0;
+  margin-bottom: 0.5rem;
+}
+
+.opciones {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.opcion {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.25rem 1rem;
+  background: #fbf9f4;
+  border: 1px solid #c9bea4;
+  border-radius: 999px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.opcion:hover {
+  background: #e3eff6;
+}
+
+.opcion:has(input:checked) { /* La opción se resalta de azul al estar seleccionada*/
+  background: #a9d0e8;
+  border-color: #3e7ca6;
+}
+
+/* Se podrían añadir los términos y condiciones, */
+/* pero implicaría un documento HTML más de lo que indica el enunciado */
+
+/* Aceptar terminos y condiciones */
+.campo-check {
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.campo-check input {
+  flex-shrink: 0;
+  width: 1.2rem;
+  height: 1.2rem;
+  margin-top: 0.3rem;
+}
+
+.campo-check label {
+  font-family: 'Newsreader', Georgia, serif;
+  font-size: 1rem;
+  text-transform: none;
+}
+
+.acciones {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+/* Botones */
+.boton {
+  padding: 0.75rem 1.5rem;
+  border: 1px solid #1c1712;
+  border-radius: 2px;
+  font-family: 'Geist Pixel', monospace;
+  font-size: 0.875rem;
+  cursor: pointer;
+}
+
+.boton-enviar {
+  background: #1c1712;
+  color: #fbf9f4;
+}
+
+.boton-enviar:hover {
+  background: #52493c;
+}
+
+.boton-limpiar {
+  background: transparent;
+  color: #1c1712;
+}
+
+.boton-limpiar:hover {
+  background: #e3eff6;
+}
+
+/* Página de contacto */
+.canales {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin: 2rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Tres canales de contacto en fila */
+.canales li {
+  flex: 1 1 300px;
+}
+
+.canal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  height: 100%;
+  padding: 1.5rem 1rem;
+  background: #ede6d6;
+  border: 1px solid #e1d8c3;
+  border-radius: 4px;
+  color: #1c1712;
+  text-decoration: none;
+}
+
+.canal:hover {
+  background: #e3eff6;
+  border-color: #3e7ca6;
+}
+
+.canal-icono {
+  display: grid;
+  place-items: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 2px;
+  background: #fbf9f4;
+  border: 1px solid #e1d8c3;
+}
+
+.canal-icono img {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+}
+
+.canal-texto {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.canal-nombre {
+  font-family: 'Geist Pixel', monospace;
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #52493c;
+}
+
+.canal-dato {
+  font-size: 1.125rem;
+  font-weight: 500;
+  overflow-wrap: anywhere;
+}
+
+/* Imagen de ubicación en el mapa */
+.imagen-localizacion {
+  max-width: 640px;
+  margin: 1.5rem auto 0;
+  border: 1px solid #e1d8c3;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.imagen-localizacion img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+}
+
+/* Footer */
+.pie-pagina {
+  padding: 1.5rem 1rem;
+  background: #1c1712;
+  color: #c9bea4;
+  text-align: center;
+}
+
+.redes-sociales {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 0 0 1rem;
+  padding: 0;
+  list-style: none;
+}
+
+.redes-sociales a {
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 2px;
+  background: #fbf9f4;
+}
+
+.redes-sociales a:hover {
+  background: #e3eff6;
+}
+
+.redes-sociales img {
+  width: 38px;
+  height: 38px;
+  object-fit: contain;
+}
+
+.copyright {
+  margin: 0;
+  font-family: 'Geist Pixel', monospace;
+  font-size: 0.75rem;
+}
+
+/* Responsive */
+
+@media (max-width: 1024px) {
+  .cabecera {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+}
+
+@media (max-width: 640px) {
+  .cabecera {
+    padding: 1rem;
+  }
+
+  .logo {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+  }
+
+  .contenido {
+    padding: 2.5rem 1rem;
+  }
+
+  .formulario {
+    padding: 1.25rem;
+  }
+
+  h1, h2, h3, h4 {
+    font-size: 1.5rem;
+  }
+
+    .contenido-indice section {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .contenido-indice .imagen-indice {
+    width: 100%;
+    max-width: 100%;
+  }
+
+    .galeria-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}

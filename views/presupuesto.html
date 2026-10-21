@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Presupuesto | Portfolio de Clara Di Carlo</title>
+  <link rel="icon" type="image/x-icon" href="../assets/img/favicon.ico">
+  <meta name="author" content="Victor San Miguel">
+  <meta name="description" content="Presupuesto para que Clara Di Carlo trabaje en tu proyecto de vídeo, foto o estrategia de contenido.">
+  <meta name="keywords" content="Clara Di Carlo, portfolio, communications specialist, content creator, social media manager, estrategia digital, storytelling digital, marketing de contenidos, comunicación, redes sociales">
+  <link rel="stylesheet" href="../css/estilos.css">
+</head>
+<body>
+  <!-- Header con menú de navegación de la página -->
+  <header class="cabecera">
+    <a class="logo" href="../index.html">
+      <span class="logo-nombre">Clara Di Carlo</span>
+      <span class="logo-rol">Social Media Manager</span>
+    </a>
+    <nav aria-label="Navegación principal">
+      <ul class="menu-lista">
+        <li><a href="../index.html">Inicio</a></li>
+        <li><a href="galeria.html">Galería</a></li>
+        <li><a href="presupuesto.html" aria-current="page">Presupuesto</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+  <!-- Contenido principal -->
+  <main class="contenido">
+    <h1>Solicita tu presupuesto</h1>
+    <p>Rellena el formulario y me pondré en contacto contigo.</p>
+    <!-- method="get" y action="#" solo para pruebas en local: cambiar por post y la dirección real cuando exista un servidor -->
+    <form class="formulario" action="#" method="get">
+      <p class="nota-obligatorio">Los campos marcados con <span class="obligatorio">*</span> son obligatorios.</p>
+      <div class="campo">
+        <label for="nombre">Nombre <span class="obligatorio" aria-hidden="true">*</span></label>
+        <input
+          type="text"
+          id="nombre"
+          name="nombre"
+          required
+          maxlength="20"
+          pattern="[A-Za-zÁÉÍÓÚÜÑáéíóúüñ]{3,20}"
+          placeholder="Ej.: María"
+          title="Entre 3 y 20 letras, sin números ni espacios"
+          autocomplete="given-name">
+      </div>
+      <div class="campo-doble">
+        <div class="campo">
+          <label for="prefijo">Prefijo</label>
+          <input
+            type="text"
+            id="prefijo"
+            name="prefijo"
+            maxlength="6"
+            pattern="\+\S{1,5}"
+            placeholder="+34"
+            title="Debe empezar por +, por ejemplo +34"
+            autocomplete="tel-country-code">
+        </div>
+        <div class="campo">
+          <label for="telefono">Teléfono <span class="obligatorio" aria-hidden="true">*</span></label>
+          <input
+            type="tel"
+            id="telefono"
+            name="telefono"
+            required
+            maxlength="9"
+            pattern="[0-9]{9}"
+            placeholder="Ej.: 612345678"
+            title="9 dígitos, sin espacios ni prefijo"
+            autocomplete="tel">
+        </div>
+      </div>
+      <div class="campo">
+        <label for="email">Email <span class="obligatorio" aria-hidden="true">*</span></label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          required
+          pattern="[^\s@]+@[^\s@]+\.[A-Za-z]{2,}"
+          placeholder="nombre@correo.es"
+          title="Un correo, por ejemplo nombre@correo.es"
+          autocomplete="email">
+      </div>
+      <fieldset class="grupo">
+        <legend>Tipo de proyecto</legend>
+        <div class="opciones">
+          <label class="opcion"><input type="checkbox" name="tipo" value="foto"> Foto</label>
+          <label class="opcion"><input type="checkbox" name="tipo" value="video"> Vídeo</label>
+          <label class="opcion"><input type="checkbox" name="tipo" value="estrategia"> Estrategia</label>
+        </div>
+      </fieldset>
+      <div class="campo">
+        <label for="informacion">Más información</label>
+        <textarea
+          id="informacion"
+          name="informacion"
+          rows="5"
+          maxlength="500"
+          placeholder="Cuéntame qué necesitas: tipo de proyecto, plazos, presupuesto aproximado..."></textarea>
+      </div>
+      <div class="campo campo-check">
+        <input type="checkbox" id="privacidad" name="privacidad" required>
+        <label for="privacidad">He leído y acepto la política de privacidad <span class="obligatorio" aria-hidden="true">*</span></label>
+      </div>
+      <div class="acciones">
+        <button class="boton boton-enviar" type="submit">Enviar</button>
+        <button class="boton boton-limpiar" type="reset">Limpiar</button>
+      </div>
+    </form>
+  </main>
+  <!-- Footer con redes sociales y copyright -->
+  <footer class="pie-pagina">
+    <ul class="redes-sociales">
+      <li>
+        <a href="https://www.instagram.com/clara.di.carlo/" target="_blank" rel="noopener noreferrer">
+          <img src="../assets/img/instagram.png" alt="Mi Instagram" width="38" height="38">
+        </a>
+      </li>
+      <li>
+        <a href="https://www.linkedin.com/in/clara-di-carlo-herranz-63729316b/" target="_blank" rel="noopener noreferrer">
+          <img src="../assets/img/linkedin.png" alt="Mi LinkedIn" width="38" height="38">
+        </a>
+      </li>
+      <li>
+        <a href="https://www.tiktok.com/@clara.di.carlo/" target="_blank" rel="noopener noreferrer">
+          <img src="../assets/img/tiktok.png" alt="Mi TikTok" width="38" height="38">
+        </a>
+      </li>
+    </ul>
+    <p class="copyright">&copy; 2026 Clara Di Carlo. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>
