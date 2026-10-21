@@ -67,13 +67,14 @@ main {
 .logo-nombre {
   font-family: 'Geist Pixel', monospace;
   font-size: 1.125rem;
-  font-weight: 400;
+  font-weight: 400 !important;
   text-transform: uppercase;
 }
 
 .logo-rol {
   font-family: 'Geist Pixel', 'Courier New', monospace;
   font-size: 0.75rem;
+  font-weight: 400 !important;
   letter-spacing: 0.16em;
   text-transform: uppercase;
   color: #52493c;
@@ -95,6 +96,7 @@ main {
   padding: 0.5rem 1rem;
   border-radius: 2px;
   font-family: 'Geist Pixel', monospace;
+  font-weight: 400 !important;
   font-size: 0.875rem;
   color: #1c1712;
   text-decoration: none;
@@ -130,12 +132,13 @@ h1, h2, h3, h4 {
   font-size: 2rem;
   line-height: 1.1;
   font-weight: bold;
-  font-weight: 400;
+  font-weight: 400 !important;
 }
 
 .contenido-indice p {
   font-family: 'Geist Pixel', monospace;
   font-size: 1.2rem;
+  font-weight: 400 !important;
   line-height: 1.7;
   margin-bottom: 0;
 }
@@ -221,6 +224,7 @@ h1, h2, h3, h4 {
 .campo label,
 .grupo legend {
   font-family: 'Geist Pixel', monospace;
+  font-weight: 400 !important;
   font-size: 0.875rem;
   text-transform: uppercase;
 }
@@ -332,6 +336,7 @@ h1, h2, h3, h4 {
   border: 1px solid #1c1712;
   border-radius: 2px;
   font-family: 'Geist Pixel', monospace;
+  font-weight: 400 !important;
   font-size: 0.875rem;
   cursor: pointer;
 }
@@ -413,6 +418,7 @@ h1, h2, h3, h4 {
 
 .canal-nombre {
   font-family: 'Geist Pixel', monospace;
+  font-weight: 400 !important;
   font-size: 0.75rem;
   letter-spacing: 0.15em;
   text-transform: uppercase;
@@ -479,6 +485,7 @@ h1, h2, h3, h4 {
 .copyright {
   margin: 0;
   font-family: 'Geist Pixel', monospace;
+  font-weight: 400 !important;
   font-size: 0.75rem;
 }
 
