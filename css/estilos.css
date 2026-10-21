@@ -1,7 +1,7 @@
 /*Fuente Geist Pixel, el archivo está en assets/fonts*/
 @font-face {
   font-family: 'Geist Pixel';
-  src: url('../assets/fonts/GeistPixel-Square.woff2') format('woff2');
+  src: url('../assets/fonts/GeistPixel-Regular.ttf') format('truetype');
   font-style: normal;
   font-weight: 400;
   font-display: swap;
@@ -65,14 +65,24 @@ main {
 }
 
 .logo-nombre {
-  font-family: 'Geist Pixel', monospace;
+  font-family: 'Geist Pixel', monospace !important;
+  font-weight: 400 !important;
+  font-variation-settings: normal !important;
+  font-optical-sizing: none !important;
+  font-synthesis: none !important;
+  text-shadow: none !important;
   font-size: 1.125rem;
   font-weight: 400;
   text-transform: uppercase;
 }
 
 .logo-rol {
-  font-family: 'Geist Pixel', 'Courier New', monospace;
+  font-family: 'Geist Pixel', 'Courier New', monospace !important;
+  font-weight: 400 !important;
+  font-variation-settings: normal !important;
+  font-optical-sizing: none !important;
+  font-synthesis: none !important;
+  text-shadow: none !important;
   font-size: 0.75rem;
   letter-spacing: 0.16em;
   text-transform: uppercase;
@@ -94,7 +104,12 @@ main {
   display: block;
   padding: 0.5rem 1rem;
   border-radius: 2px;
-  font-family: 'Geist Pixel', monospace;
+  font-family: 'Geist Pixel', monospace !important;
+  font-weight: 400 !important;
+  font-variation-settings: normal !important;
+  font-optical-sizing: none !important;
+  font-synthesis: none !important;
+  text-shadow: none !important;
   font-size: 0.875rem;
   color: #1c1712;
   text-decoration: none;
@@ -126,15 +141,24 @@ main {
 /* Títulos, parrafos y secciones */
 h1, h2, h3, h4 {
   margin: 3rem 0 1rem;
-  font-family: 'Geist Pixel', monospace;
+  font-family: 'Geist Pixel', monospace !important;
+  font-weight: 400 !important;
+  font-variation-settings: normal !important;
+  font-optical-sizing: none !important;
+  font-synthesis: none !important;
+  text-shadow: none !important;
   font-size: 2rem;
   line-height: 1.1;
   font-weight: bold;
-  font-weight: 400;
 }
 
 .contenido-indice p {
-  font-family: 'Geist Pixel', monospace;
+  font-family: 'Geist Pixel', monospace !important;
+  font-weight: 400 !important;
+  font-variation-settings: normal !important;
+  font-optical-sizing: none !important;
+  font-synthesis: none !important;
+  text-shadow: none !important;
   font-size: 1.2rem;
   line-height: 1.7;
   margin-bottom: 0;
@@ -220,7 +244,12 @@ h1, h2, h3, h4 {
 
 .campo label,
 .grupo legend {
-  font-family: 'Geist Pixel', monospace;
+  font-family: 'Geist Pixel', monospace !important;
+  font-weight: 400 !important;
+  font-variation-settings: normal !important;
+  font-optical-sizing: none !important;
+  font-synthesis: none !important;
+  text-shadow: none !important;
   font-size: 0.875rem;
   text-transform: uppercase;
 }
@@ -331,7 +360,12 @@ h1, h2, h3, h4 {
   padding: 0.75rem 1.5rem;
   border: 1px solid #1c1712;
   border-radius: 2px;
-  font-family: 'Geist Pixel', monospace;
+  font-family: 'Geist Pixel', monospace !important;
+  font-weight: 400 !important;
+  font-variation-settings: normal !important;
+  font-optical-sizing: none !important;
+  font-synthesis: none !important;
+  text-shadow: none !important;
   font-size: 0.875rem;
   cursor: pointer;
 }
@@ -412,7 +446,12 @@ h1, h2, h3, h4 {
 }
 
 .canal-nombre {
-  font-family: 'Geist Pixel', monospace;
+  font-family: 'Geist Pixel', monospace !important;
+  font-weight: 400 !important;
+  font-variation-settings: normal !important;
+  font-optical-sizing: none !important;
+  font-synthesis: none !important;
+  text-shadow: none !important;
   font-size: 0.75rem;
   letter-spacing: 0.15em;
   text-transform: uppercase;
@@ -478,7 +517,12 @@ h1, h2, h3, h4 {
 
 .copyright {
   margin: 0;
-  font-family: 'Geist Pixel', monospace;
+  font-family: 'Geist Pixel', monospace !important;
+  font-weight: 400 !important;
+  font-variation-settings: normal !important;
+  font-optical-sizing: none !important;
+  font-synthesis: none !important;
+  text-shadow: none !important;
   font-size: 0.75rem;
 }
 
