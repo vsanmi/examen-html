@@ -66,7 +66,7 @@ main {
 .logo-nombre {
   font-family: 'Geist Pixel', monospace;
   font-size: 1.125rem;
-  font-weight: 500;
+  font-weight: 400;
   text-transform: uppercase;
 }
 
@@ -124,11 +124,12 @@ main {
 
 /* Títulos, parrafos y secciones */
 h1, h2, h3, h4 {
-  margin: 3 0 1rem;
+  margin: 3rem 0 1rem;
   font-family: 'Geist Pixel', monospace;
   font-size: 2rem;
   line-height: 1.1;
   font-weight: bold;
+  font-weight: 400;
 }
 
 .contenido-indice p {
