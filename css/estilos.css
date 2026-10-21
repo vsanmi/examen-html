@@ -2,14 +2,16 @@
 @font-face {
   font-family: 'Geist Pixel';
   src: url('../assets/fonts/GeistPixel-Regular.ttf') format('truetype');
-  font-display: swap;
+  font-style: normal;
+  font-weight: 400;
 }
 
 /*Fuente Newsreader, el archivo está en assets/fonts*/
 @font-face {
   font-family: 'Newsreader';
   src: url('../assets/fonts/Newsreader-Variable.ttf') format('truetype');
-  font-display: swap;
+  font-style: normal;
+  font-weight: 400;
 }
 
 /* Reset del cache y estilos del navegador */
