@@ -31,7 +31,7 @@ try {
     }
 
     const nivel = Math.min(index + 1, 6);
-    const titulo = document.createElement('h' + nivel); // se crea el titulo con su nivel (h1, h2, h3 y h4)
+    const titulo = document.createElement("h" + nivel); // se crea el titulo con su nivel (h1, h2, h3 y h4)
     titulo.textContent = noticia.titulo;
 
     const parrafo = document.createElement("p"); // se crea un parrafo

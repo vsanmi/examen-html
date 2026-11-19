@@ -177,7 +177,6 @@ h1, h2, h3, h4 {
   max-width: 450px;
 }
 
-/* Galería de imágenes: dos columnas */
 /* Galería en mosaico: cuatro columnas con filas de altura fija */
 .galeria-grid {
   display: grid;
@@ -213,6 +212,100 @@ h1, h2, h3, h4 {
 /* En el segundo bloque la imagen grande pasa a la derecha */
 .galeria-grid img:nth-child(12n+7) {
   grid-column: 3 / span 2;
+}
+
+/*Zoom de la galeria*/
+.galeria-grid img {
+  cursor: zoom-in;
+}
+
+.galeria-grid img:focus-visible {
+  outline: 2px solid #3e7ca6;
+  outline-offset: 3px;
+}
+
+/* Visor: ventana con la imagen ampliada */
+.visor {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  max-width: 100vw;
+  max-height: 100vh;
+  overflow: visible;
+}
+
+.visor::backdrop {
+  background: rgba(28, 23, 18, 0.85);
+}
+
+.visor-imagen {
+  display: block;
+  max-width: 90vw;
+  max-height: 85vh;
+  object-fit: contain;
+  border-radius: 0.5rem;
+}
+
+.visor-cerrar {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  padding: 0.5rem 1rem;
+  border: 1px solid #1c1712;
+  border-radius: 2px;
+  background: #fbf9f4;
+  color: #1c1712;
+  font-family: 'Geist Pixel', monospace;
+  font-size: 0.875rem;
+  cursor: pointer;
+}
+
+.visor-cerrar:hover {
+  background: #e3eff6;
+}
+
+.visor-cerrar:focus-visible {
+  outline: 2px solid #3e7ca6;
+  outline-offset: 2px;
+}
+
+/* Flechas de navegación del visor */
+.visor-flecha {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 3rem;
+  height: 3rem;
+  border: 1px solid #1c1712;
+  border-radius: 2px;
+  background: #fbf9f4;
+  color: #1c1712;
+  font-family: 'Geist Pixel', monospace;
+  font-size: 1.25rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.visor-anterior {
+  left: 0.75rem;
+}
+
+.visor-siguiente {
+  right: 0.75rem;
+}
+
+.visor-flecha:hover {
+  background: #e3eff6;
+}
+
+.visor-flecha:focus-visible {
+  outline: 2px solid #3e7ca6;
+  outline-offset: 2px;
+}
+
+/* Mientras el visor está abierto, la página de fondo no se desplaza */
+body:has(.visor[open]) {
+  overflow: hidden;
 }
 
 /* Formulario de presupuesto */
