@@ -32,7 +32,7 @@
     <h1>Solicita tu presupuesto</h1>
     <p>Rellena el formulario y me pondré en contacto contigo.</p>
     <!-- method="get" y action="#" solo para pruebas en local: cambiar por post y la dirección real cuando exista un servidor -->
-    <form class="formulario" action="#" method="get">
+    <form id="formulario" class="formulario" action="#" method="get">
       <p class="nota-obligatorio">Los campos marcados con <span class="obligatorio">*</span> son obligatorios.</p>
       <div class="campo">
         <label for="nombre">Nombre <span class="obligatorio" aria-hidden="true">*</span></label>
@@ -40,12 +40,21 @@
           type="text"
           id="nombre"
           name="nombre"
-          required
-          maxlength="20"
-          pattern="[A-Za-zÁÉÍÓÚÜÑáéíóúüñ]{3,20}"
           placeholder="Ej.: María"
           title="Entre 3 y 20 letras, sin números ni espacios"
           autocomplete="given-name">
+        <span class="error" id="error-nombre" role="alert"></span>
+      </div>
+      <div class="campo">
+        <label for="apellidos">Apellidos <span class="obligatorio" aria-hidden="true">*</span></label>
+        <input
+          type="text"
+          id="apellidos"
+          name="apellidos"
+          placeholder="Ej.: García"
+          title="Entre 4 y 40 letras, sin números ni espacios"
+          autocomplete="family-name">
+        <span class="error" id="error-apellidos" role="alert"></span>
       </div>
       <div class="campo-doble">
         <div class="campo">
@@ -66,12 +75,10 @@
             type="tel"
             id="telefono"
             name="telefono"
-            required
-            maxlength="9"
-            pattern="[0-9]{9}"
             placeholder="Ej.: 612345678"
             title="9 dígitos, sin espacios ni prefijo"
             autocomplete="tel">
+          <span class="error" id="error-telefono" role="alert"></span>
         </div>
       </div>
       <div class="campo">
@@ -80,19 +87,28 @@
           type="email"
           id="email"
           name="email"
-          required
-          pattern="[^\s@]+@[^\s@]+\.[A-Za-z]{2,}"
           placeholder="nombre@correo.es"
           title="Un correo, por ejemplo nombre@correo.es"
           autocomplete="email">
+        <span class="error" id="error-email" role="alert"></span>
       </div>
       <fieldset class="grupo">
-        <legend>Tipo de proyecto</legend>
-        <div class="opciones">
-          <label class="opcion"><input type="checkbox" name="tipo" value="foto"> Foto</label>
-          <label class="opcion"><input type="checkbox" name="tipo" value="video"> Vídeo</label>
-          <label class="opcion"><input type="checkbox" name="tipo" value="estrategia"> Estrategia</label>
-        </div>
+      <div class="campo">
+        <label for="producto">Producto <span class="obligatorio">*</span></label>
+        <select id="producto" name="producto">
+          <option value="" data-precio="0" selected>-- Selecciona un producto --</option>
+          <option value="basico" data-precio="300">Pack básico de redes (300 €)</option>
+          <option value="contenidos" data-precio="600">Estrategia de contenidos (600 €)</option>
+          <option value="integral" data-precio="1000">Gestión integral (1000 €)</option>
+        </select>
+        <span class="error" id="error-producto" role="alert"></span>
+      </div>
+      <div class="campo">
+        <label for="plazo">Plazo de entrega (en meses) <span class="obligatorio">*</span></label>
+        <input type="number" id="plazo" name="plazo" min="0" step="1" value="0">
+        <small>Descuento: 3-5 meses 5 %, 6-11 meses 10 %, 12 o más 15 %.</small>
+        <span class="error" id="error-plazo" role="alert"></span>
+      </div>
       </fieldset>
       <div class="campo">
         <label for="informacion">Más información</label>
@@ -103,14 +119,35 @@
           maxlength="500"
           placeholder="Cuéntame qué necesitas: tipo de proyecto, plazos, presupuesto aproximado..."></textarea>
       </div>
+      <fieldset class="grupo">
+      <div class="grupo">
+        <p>Extras</p>
+        <div class="opciones">
+          <label class="opcion">
+            <input type="checkbox" name="extras" value="informe" data-precio="50">
+            Informe mensual (+50 €)
+          </label>
+          <label class="opcion">
+            <input type="checkbox" name="extras" value="calendario" data-precio="80">
+            Calendario editorial (+80 €)
+          </label>
+          <label class="opcion">
+          <input type="checkbox" name="extras" value="fotos" data-precio="120">
+          Sesión de fotos (+120 €)
+          </label>
+        </div>
+      </div>
+      </fieldset>
+      <p>Presupuesto final: <output id="presupuesto" for="producto plazo">0 €</output></p>
       <div class="campo campo-check">
-        <input type="checkbox" id="privacidad" name="privacidad" required>
-        <label for="privacidad">He leído y acepto la política de privacidad <span class="obligatorio" aria-hidden="true">*</span></label>
+        <input type="checkbox" id="condiciones" name="condiciones" required>
+        <label for="condiciones">He leído y acepto las condiciones de privacidad <span class="obligatorio" aria-hidden="true">*</span></label>
       </div>
       <div class="acciones">
         <button class="boton boton-enviar" type="submit">Enviar</button>
         <button class="boton boton-limpiar" type="reset">Limpiar</button>
       </div>
+      <p id="mensaje-envio" role="status"></p>
     </form>
   </main>
   <!-- Footer con redes sociales y copyright -->
