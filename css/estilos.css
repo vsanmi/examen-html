@@ -326,7 +326,7 @@ body:has(.visor[open]) {
 
 /* Asterisco de los campos obligatorios */
 .obligatorio {
-  color: #b42318;
+  color: blue;
 }
 
 .campo {
@@ -349,8 +349,8 @@ body:has(.visor[open]) {
   width: 100%;
   padding: 0.75rem 1rem;
   border: 1.5px solid #c9bea4;
-  border-radius: 2px;
-  background: #fbf9f4;
+  border-radius: 0.75rem;
+  background: white;
   color: #1c1712;
   font: inherit;
 }
@@ -543,19 +543,16 @@ body:has(.visor[open]) {
   overflow-wrap: anywhere;
 }
 
-/* Imagen de ubicación en el mapa */
-.imagen-localizacion {
+/* Mapa de ubicación con Leaflet y OpenStreetMap */
+.map {
+  display: block;
+  width: 100%;
   max-width: 640px;
+  object-fit: cover;
   margin: 1.5rem auto 0;
   border: 1px solid #e1d8c3;
   border-radius: 4px;
   overflow: hidden;
-}
-
-.imagen-localizacion img {
-  display: block;
-  width: 100%;
-  object-fit: cover;
 }
 
 /* Footer */
