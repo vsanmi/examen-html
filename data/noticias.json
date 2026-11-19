@@ -1,0 +1,26 @@
+[
+  {
+    "titulo": "Estrategia de contenidos",
+    "texto": "Creo estrategias de contenido adaptadas a cada marca, teniendo en cuenta sus objetivos, su público y su forma de comunicar. Planifico cada mensaje para transmitir la esencia de la marca, conectar con la audiencia y generar contenido que aporte valor.",
+    "imagen": "assets/img/estrategia.jpg",
+    "alt": "Estrategia de contenidos"
+  },
+  {
+    "titulo": "Producción de vídeo",
+    "texto": "Doy vida a las ideas a través de vídeos que cuentan historias y transmiten emociones. Me encargo de todo el proceso, desde la planificación hasta la edición final, cuidando cada detalle para conseguir un resultado atractivo y coherente con la identidad de la marca.",
+    "imagen": "assets/img/video.jpeg",
+    "alt": "Producción de vídeo"
+  },
+  {
+    "titulo": "Producción de pódcasts y locuciones",
+    "texto": "Creo pódcasts y locuciones que conectan con las personas a través de la voz. Cuido el sonido, el ritmo y el tono para conseguir un resultado natural y profesional, adaptado al mensaje que se quiere transmitir y al público al que se dirige.",
+    "imagen": "assets/img/podcast.jpeg",
+    "alt": "Producción de pódcasts y locuciones"
+  },
+  {
+    "titulo": "Fotografía profesional",
+    "texto": "Capturo imágenes que transmiten la personalidad de cada marca y cuentan historias sin necesidad de palabras. Trabajo la luz, la composición y cada detalle para conseguir fotografías cuidadas, auténticas y alineadas con la imagen que se quiere proyectar.",
+    "imagen": "assets/img/c4.jpg",
+    "alt": "Fotografía profesional"
+  }
+]
